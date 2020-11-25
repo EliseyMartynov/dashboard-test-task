@@ -8,7 +8,7 @@ To run project on local machine follow this:
 npm install
 npm run serve
 ```
-But mention that you need **Postgres** being installed on your machine as well as **.env** file with connection string.
+But remember that you need **Postgres** being installed on your machine as well as **.env** file with connection string.
 
 ###Thanks for help to
 
