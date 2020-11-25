@@ -10,7 +10,7 @@ npm run serve
 ```
 But remember that you need **Postgres** being installed on your machine as well as **.env** file with connection string.
 
-###Thanks for help to
+### Thanks for help to
 
 * **Sequelize** and **AdminBro** for their documentation
 * **Stackoverflow** topics :)
