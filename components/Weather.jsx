@@ -8,7 +8,7 @@ import {
   Line,
   XAxis,
   YAxis,
-  Tooltip
+  Tooltip,
 } from "recharts";
 
 const api = new ApiClient();
@@ -22,12 +22,12 @@ const Weather = () => {
         const res = await api.getDashboard();
         const proceed = await {
           city: res.data[0].city,
-          data: JSON.parse(res.data[0].tenDaysWeather).map(item => {
+          data: JSON.parse(res.data[0].tenDaysWeather).map((item) => {
             return {
               ...item,
-              date: new Date(item.date).toLocaleDateString()
+              date: new Date(item.date).toLocaleDateString(),
             };
-          })
+          }),
         };
         setData(proceed);
       } catch (e) {
@@ -36,22 +36,14 @@ const Weather = () => {
     })();
   }, [api]);
 
-  console.log(data);
-
   return (
     <Box variant="grey">
       <Box variant="white" style={{ height: "100%" }}>
         {data && (
           <>
             <H1 textAlign="center" mb="5">
-              10 days weather in: {data.city}
+              10 days weather in: {data.city} (Not real random data)
             </H1>
-            <span>
-              Data was collected from{" "}
-              <Link href="https://yandex.ru/pogoda/krasnodar/month/november?via=cnav">
-                Yandex.Pogoda
-              </Link>
-            </span>
             <ResponsiveContainer width="100%" height={300}>
               <LineChart
                 data={data.data}
