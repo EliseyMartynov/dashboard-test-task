@@ -3,7 +3,7 @@ const adminBro = require("./adminbroInstance");
 
 const ADMIN = {
   email: "test@example.com",
-  password: "password"
+  password: "password",
 };
 
 const router = AdminBroExpress.buildAuthenticatedRouter(adminBro, {
@@ -14,7 +14,7 @@ const router = AdminBroExpress.buildAuthenticatedRouter(adminBro, {
     return null;
   },
   cookieName: "adminbro",
-  cookiePassword: "somePassword"
+  cookiePassword: "somePassword",
 });
 
 module.exports = router;
