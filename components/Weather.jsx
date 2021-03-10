@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { ApiClient } from "admin-bro";
-import { Box, H1, Link } from "@admin-bro/design-system";
+import { Box, H1 } from "@admin-bro/design-system";
 import {
   ResponsiveContainer,
   LineChart,
