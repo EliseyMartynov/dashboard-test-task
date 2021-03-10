@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "serve": "forever -w index.js",
-    "start": "node index.js"
+    "start": "npm install && node index.js"
   },
   "keywords": [],
   "author": "",
