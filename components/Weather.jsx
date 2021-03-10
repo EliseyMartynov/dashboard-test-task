@@ -20,7 +20,6 @@ const Weather = () => {
     (async () => {
       try {
         const res = await api.getDashboard();
-        console.log(api);
         const proceed = await {
           city: res.data[0].city,
           data: JSON.parse(res.data[0].tenDaysWeather).map((item) => {
